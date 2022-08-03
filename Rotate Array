@@ -1,0 +1,30 @@
+//https://practice.geeksforgeeks.org/problems/rotate-array-by-n-elements-1587115621/1
+
+class Solution
+{
+    //Function to rotate an array by d elements in counter-clockwise direction. 
+    
+    public static void reverse(int[] arr, int left, int right){
+
+        while(left < right) {
+            int temp = arr[left];
+            arr[left++] = arr[right];
+            arr[right--] = temp;
+        }
+     
+    }
+    
+    static void rotateArr(int arr[], int d, int n)
+    {
+        d = d%n;
+    
+
+        if(d < 0) {
+            d = d + n;
+        }
+
+        reverse(arr, 0, d-1);
+        reverse(arr, d, n-1);
+        reverse(arr, 0, n-1);
+    }
+}
