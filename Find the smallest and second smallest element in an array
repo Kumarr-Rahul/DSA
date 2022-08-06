@@ -1,0 +1,36 @@
+//https://practice.geeksforgeeks.org/problems/find-the-smallest-and-second-smallest-element-in-an-array3226/1
+
+class Compute 
+{
+    public long[] minAnd2ndMin(long a[], long n)  
+    {
+        long firstEle = Long.MAX_VALUE;
+        long secondEle =  Long.MAX_VALUE;
+        long[] ans = new long[2];
+        
+        for(int i = 0; i < n; i++){
+            
+            if(a[i] < firstEle) {
+                
+                secondEle = firstEle;
+                firstEle = a[i];
+                
+            }else if(a[i] < secondEle && a[i] != firstEle) {
+                
+                secondEle = a[i];
+            }
+        }
+        
+        ans[0] = firstEle;
+        ans[1] = secondEle;
+        
+        if(firstEle == Long.MAX_VALUE || secondEle== Long.MAX_VALUE ) {
+            ans[0] = -1;
+            ans[1] = -1;
+            return ans;
+        }else {
+          return ans;  
+        }
+        
+    }
+}
