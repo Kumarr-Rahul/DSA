@@ -1,0 +1,32 @@
+//https://practice.geeksforgeeks.org/problems/equal-sum0810/1
+class Solution {
+    String equilibrium(int arr[], int n) {
+        // code here
+        int lsum = 0;
+        int sum = 0;
+        
+        for(int i = 0; i < n; i++) {
+            sum+= arr[i];
+        }
+        
+        // int reqIndex = 0;
+        Boolean check = false;
+        for(int i = 0; i < n; i++) {
+            sum-= arr[i];
+            
+            if(lsum == sum) {
+                // reqIndex = arr[i];
+                check = true;
+            }
+            
+            lsum+=arr[i];
+        }
+        
+        if(check) {
+            return "YES";
+        } else {
+            return "NO";
+        }
+        
+    }
+}
