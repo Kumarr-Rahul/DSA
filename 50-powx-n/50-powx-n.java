@@ -7,7 +7,8 @@ class Solution {
         
         
         if(n<0){
-            return 1/x * myPow(1/x, -(n + 1));
+            double subans = myPow(1/x, -(n + 1));
+            return 1/x * subans;
         }
         
 
