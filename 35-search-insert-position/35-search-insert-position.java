@@ -1,29 +1,19 @@
 class Solution {
     public int searchInsert(int[] nums, int target) {
-        int idx = 0;
-        int put = 0;
-        boolean flag = false;
+        int idx = nums.length;
+        
         for(int i = 0; i < nums.length; i++) {
             if(target == nums[i]) {
                 idx = i;
-                flag = true;
-            }
-        }
-        
-        for(int i = 0; i < nums.length; i++) {
-            if(target < nums[i]) {
-                put = i;
                 break;
-            }else {
-                put = nums.length;
+            }
+            
+            if(target < nums[i]) {
+                idx = i;
+                break;
             }
         }
         
-        if(flag) {
-           return idx; 
-        }else {
-            return put;
-        }
-        
-    }
+        return idx;
+  }
 }
