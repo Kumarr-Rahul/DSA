@@ -1,7 +1,6 @@
 class Solution {
     
     public static int arraySum(int[] arr2) {
-        // int sum = Integer.MAX_VALUE;
         int sum = 0;
         for(int i = 0; i< arr2.length; i++) {
             sum += arr2[i];
