@@ -7,7 +7,7 @@ public class Solution {
             
             count += n & 1;
             
-            n = n>>>1;
+            n = n>>>1; //shift to right by one place
         }
         return count;
     }
