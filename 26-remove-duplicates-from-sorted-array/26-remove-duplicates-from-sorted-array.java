@@ -25,9 +25,9 @@ class Solution {
         
         ans = a + 1;
         
-        for(int i = ans; i < n; i++) {
-            nums[i] = '_';
-        }
+        // for(int i = ans; i < n; i++) {
+        //     nums[i] = '_';
+        // }
         
         return ans;
     }
