@@ -17,7 +17,7 @@ class Solution {
         
 //         return ans + 1;
         
-        
+        //same complexity
         int max = 1;
         for(int i = 0; i < sentences.length; i++){
             String[] arr = sentences[i].split(" ");
