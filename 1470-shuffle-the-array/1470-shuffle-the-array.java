@@ -4,10 +4,9 @@ class Solution {
         
         for(int i = 0,j = 0; i < n; i++) {
 
-            ans[j] = nums[i];
-            j++;
-            ans[j] = nums[i + n];
-            j++;
+            ans[j++] = nums[i];
+            ans[j++] = nums[i + n];
+
         }
         
         return ans;
