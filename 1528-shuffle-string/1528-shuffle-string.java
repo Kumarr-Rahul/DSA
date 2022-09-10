@@ -7,6 +7,8 @@ class Solution {
             ans[indices[i]] = ch[i]; 
         }
         
-        return new String(ans);
+        String ans2 = s.valueOf(ans);
+        // return new String(ans);
+        return ans2;
     }
 }
