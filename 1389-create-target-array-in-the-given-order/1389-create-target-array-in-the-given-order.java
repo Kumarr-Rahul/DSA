@@ -5,7 +5,7 @@ class Solution {
         int idx = 0;
         
         while(idx < nums.length) {
-            for(int i = target.length - 1; i > index[idx]; i--){
+            for(int i = nums.length - 1; i > index[idx]; i--){
                 target[i] = target[i-1];
             }
             target[index[idx]] = nums[idx];
