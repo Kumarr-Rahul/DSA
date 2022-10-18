@@ -20,7 +20,7 @@ class Solution
 {
     long subCount(long arr[] ,int n,int k)
     {
-        int res = 0;
+        long res = 0;
         
         HashMap<Integer, Integer> map = new HashMap<>();
         int sum = 0;
@@ -37,8 +37,9 @@ class Solution
             map.put(rem, map.getOrDefault(rem, 0) + 1);
         }
        
-        long ans = (long) res;
-        return ans;
+        // long ans = (long) res;
+        // return ans;
+        return res;
         
         
     }
