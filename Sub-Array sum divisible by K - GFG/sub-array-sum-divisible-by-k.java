@@ -37,8 +37,6 @@ class Solution
             map.put(rem, map.getOrDefault(rem, 0) + 1);
         }
        
-        // long ans = (long) res;
-        // return ans;
         return res;
         
         
