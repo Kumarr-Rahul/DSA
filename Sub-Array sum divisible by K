@@ -1,0 +1,28 @@
+//https://practice.geeksforgeeks.org/problems/sub-array-sum-divisible-by-k2617/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article
+
+class Solution
+{
+    long subCount(long arr[] ,int n,int k)
+    {
+        long res = 0;
+        
+        HashMap<Integer, Integer> map = new HashMap<>();
+        int sum = 0;
+        map.put(sum, 1);
+        
+        for(long val: arr){
+            sum += val;
+            int rem = sum % k;
+            if(rem < 0){
+                rem += k;
+            }
+            
+            res += map.getOrDefault(rem, 0);
+            map.put(rem, map.getOrDefault(rem, 0) + 1);
+        }
+       
+        return res;
+        
+        
+    }
+}
