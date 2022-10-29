@@ -1,0 +1,32 @@
+//https://practice.geeksforgeeks.org/problems/possible-words-from-phone-digits-1587115620/1
+
+class Solution
+{
+    static final String[] KEYS = { "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz" }; 
+    //Function to find list of all words possible by pressing given numbers.
+    static ArrayList <String> possibleWords(int a[], int N)
+    {
+        
+        if(N == 0) {
+            ArrayList<String> base = new ArrayList<>();
+            base.add("");
+            return base;
+        }
+        
+        ArrayList<String> smallans = possibleWords(a, N - 1);
+        ArrayList<String> ans = new ArrayList<>();
+        
+        //Array length - N = required index value of Array, e.g. when N = 3, we need first element of array
+        //when N = 1, we need last element
+        
+        String str = KEYS[ a[a.length - N] - 1]; 
+        
+        for(char letter : str.toCharArray() ) {
+            for(String ch : smallans) {
+                ans.add(letter + ch);
+            }
+        }
+        
+        return ans;
+    }
+}
