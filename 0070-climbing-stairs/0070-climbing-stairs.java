@@ -18,17 +18,14 @@ class Solution {
         
         int prev1 = 1;
         int prev2 = 1;
-        int curr = 2;
-        
-        
-        
+       
         for(int i = 2; i <= n; i++) {
-            prev2 = prev1;
-            prev1 = curr;
-            curr = prev1 + prev2;
+            int curr = prev1 + prev2;
+            prev1 = prev2;
+            prev2 = curr;
         }
         
-        return prev1;
+        return prev2;
         
     }
     
