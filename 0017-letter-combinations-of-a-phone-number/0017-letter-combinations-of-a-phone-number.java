@@ -22,7 +22,7 @@ class Solution {
         List<String> smallans = letterCombinations(digits.substring(1));
         ArrayList<String> ans = new ArrayList<>();
         
-        for(Character letter : KEYS[digits.charAt(0) - '0' - 1].toCharArray()) {
+        for(char letter : KEYS[digits.charAt(0) - '0' - 1].toCharArray()) {
             for(String str : smallans) {
                 ans.add(letter + str);
             }
