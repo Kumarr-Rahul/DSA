@@ -7,11 +7,14 @@ class Solution {
         
         int ans = 0;
        
-        int minAns1 = memo(cost, dp, 0);
-        int minAns2 = memo(cost, dp, 1);
+        // int minAns1 = memo(cost, dp, 0);
+        // int minAns2 = memo(cost, dp, 1);
+        memo(cost, dp, 0);
         
-        ans = Math.min(minAns1, minAns2);
-        return ans;
+        // ans = Math.min(minAns1, minAns2);
+        // return ans;
+        
+        return Math.min(dp[0], dp[1]);
     }
     
     public int memo(int[] cost, int[] dp, int stair) {
