@@ -53,13 +53,14 @@ class Solution
         int left = low, right = low;
         
         while(right <= high) {
-            if(arr[right] <= arr[high]) {
+            if(arr[right] > arr[high]) {
+                
+                right++;
+            }else {
                 int temp = arr[right];
                 arr[right] = arr[left];
                 arr[left] = temp;
                 left++;
-                right++;
-            }else {
                 right++;
             }
         }
