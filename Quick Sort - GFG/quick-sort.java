@@ -37,7 +37,7 @@ class Solution
     static void quickSort(int arr[], int low, int high)
     {
         // code here
-        if(low >= high) {
+        if(low > high) {
             return;
         }
         
